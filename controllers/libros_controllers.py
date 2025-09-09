@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from services.libros.service import LibrosService
+from services.libros_service import LibrosService
 libros_bp = Blueprint("libros_bp, __name__")
 
 #Importar la sesión de la base de datos
@@ -22,9 +22,9 @@ def get_libros():
 #Obtener libro por ID 
 
 @libros_bp.route("/libros/<int:id>", methods=["GET"]) #Variable dinámica que indica que la parte <...> es una variable
-def obtener_libro_por_ID(id):
+def obtener_libro_por_ID(libro_id):
 
-    libro = service.obtener_banda(libro_id)
+    libro = service.obtener_libro(libro_id)
     if libro:
         return jsonify({"id": libro.id, "name": libro.name}), 200 
     return jsonify({"error": "Libro no encontrado"}), 404 
