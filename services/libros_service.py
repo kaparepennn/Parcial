@@ -1,10 +1,10 @@
-from respositories.libros_respository import LibrosRepository
+from repositories.libros_repository import autores
 from models.libros_model import Libro
 from sqlalchemy.orm import session
 
 class BandService:
     def __init__(self, db_session: session):
-        self.repository = LibrosRepository(db_session)
+        self.repository = db_session
 
 def listar_libros(self):
     return self.repository.get_all_libros()
