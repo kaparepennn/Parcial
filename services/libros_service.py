@@ -1,5 +1,5 @@
 from repositories.libros_repository import autores
-from models.libros_model import Libro
+from models.libros_model import libro
 from sqlalchemy.orm import session
 
 class BandService:
