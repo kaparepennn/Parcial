@@ -32,7 +32,7 @@ def actualizar_libro(selft, libro_id: id, name:str = None):
     return libro
 
 #Eliminar un libro de la base de datos, según su ID
-def eliminar_banda(self, libro_id: int):
+def eliminar_libro(self, libro_id: int):
     libro = self.get_libro_by_id(libro_id)
     if libro:
         self.db.delete(libro)
