@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 class UsersService:
     def __init__(self, db_session):
-        self.users_repository = UsersRepository(db_session)
+        self.users_repository = UserRepository(db_session)
 
     def authenticate_user(self, username: str, password: str):
         user = self.users_repository.db.query(User).filter(User.username == username).first()
