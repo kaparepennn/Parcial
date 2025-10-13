@@ -1,4 +1,4 @@
-from services.libros_service import UsersService
+from services.user_service import UsersService
 from flask import Blueprint, request, jsonify
 # Importamos Blueprint para modularizar rutas, 
 # request para acceder a datos enviados por el cliente (JSON, params, etc.) 
