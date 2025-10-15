@@ -3,7 +3,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 from flask import Blueprint, request, jsonify
-from services.libro_service import libroService
+from services.libros_service import libroService
 from flask_jwt_extended import jwt_required
 libro_bp =Blueprint('libro_bp',__name__)
 
