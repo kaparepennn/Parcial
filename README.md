@@ -1,24 +1,24 @@
-# 📚 Parcial - API CRUD con Autenticación JWT
+#Parcial - API CRUD con Autenticación JWT
 
 Este proyecto es una API desarrollada con **Flask**, que implementa un sistema CRUD (Crear, Leer, Actualizar y Eliminar) para la gestión de libros y usuarios.  
 Incluye autenticación mediante **JWT (JSON Web Tokens)** y separación por capas: `config`, `models`, `repositories`, `services` y `controllers`.
 
 ---
 
-## 🚀 Instalación
+##Instalación
 
-### 1️⃣ Clonar el repositorio
+###Clonar el repositorio
 ```bash
 git clone https://github.com/kaparepennn/Parcial.git
 cd Parcial
 ```
 
-### 2️⃣ Crear un entorno virtual
+###Crear un entorno virtual
 ```bash
 python -m venv venv
 ```
 
-### 3️⃣ Activar el entorno virtual
+###Activar el entorno virtual
 - **Windows:**
   ```bash
   venv\Scripts\activate
@@ -28,14 +28,14 @@ python -m venv venv
   source venv/bin/activate
   ```
 
-### 4️⃣ Instalar dependencias
+###Instalar dependencias
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-## ⚙️ Variables de entorno
+##Variables de entorno
 
 Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
 
@@ -51,7 +51,7 @@ DATABASE_URL=sqlite:///libros_local.db
 
 ---
 
-## 🧠 Cómo correr el proyecto en modo desarrollo
+##Cómo correr el proyecto en modo desarrollo
 
 ```bash
 flask run
@@ -62,7 +62,7 @@ Por defecto, la aplicación correrá en:
 
 ---
 
-## 🧪 Cómo ejecutar las pruebas
+## Cómo ejecutar las pruebas
 
 Si tienes pruebas unitarias configuradas en el directorio `tests/`, puedes ejecutarlas con:
 
@@ -76,7 +76,7 @@ python -m unittest discover
 
 ---
 
-## 👥 Roles del sistema
+## Roles del sistema
 
 | Rol | Descripción | Permisos |
 |-----|--------------|-----------|
@@ -85,7 +85,7 @@ python -m unittest discover
 
 ---
 
-## 🔐 Flujo de Autenticación
+## Flujo de Autenticación
 
 1. **Registro de usuario** → el usuario se registra mediante el endpoint `/auth/register`.
 2. **Inicio de sesión** → se obtiene un **token JWT** mediante `/auth/login`.
@@ -96,7 +96,7 @@ python -m unittest discover
 
 ---
 
-## 🧾 Ejemplo de Token JWT
+## Ejemplo de Token JWT
 
 **Request:**
 ```bash
@@ -120,7 +120,7 @@ Luego usas ese token para acceder a rutas protegidas.
 
 ---
 
-## 🗂️ Tabla de Endpoints
+## Tabla de Endpoints
 
 | Método | Endpoint | Descripción | Autenticación |
 |--------|-----------|-------------|----------------|
@@ -136,7 +136,7 @@ Luego usas ese token para acceder a rutas protegidas.
 
 ---
 
-## ⚠️ Errores HTTP comunes
+## Errores HTTP comunes
 
 | Código | Descripción | Causa posible |
 |--------|--------------|----------------|
@@ -148,7 +148,7 @@ Luego usas ese token para acceder a rutas protegidas.
 
 ---
 
-## 📦 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 backend/
@@ -178,7 +178,7 @@ backend/
 
 ---
 
-## 💡 Recomendaciones
+## Recomendaciones
 
 - Mantén las dependencias actualizadas.
 - Usa variables de entorno seguras (nunca subas `.env` al repositorio).
@@ -187,7 +187,7 @@ backend/
 
 ---
 
-## 👨‍💻 Autor
+##  Autor
 
 **Karen Palacios**  
 Repositorio: [https://github.com/kaparepennn/Parcial](https://github.com/kaparepennn/Parcial)
