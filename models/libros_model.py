@@ -5,7 +5,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from models.db import Base
 
-libro(Base):
+class libro(Base):
     __tablename__ = 'libros'
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(255), nullable=False)
