@@ -1,14 +1,15 @@
-<<<<<<< HEAD
 import os
-JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
-JWT_TOKEN_LOCATION = ["headers"] 
-JWT_ACCESS_TOKEN_EXPIRES = 3600 #Tiempo definido para el límite de autenticación en la aplicación en segundos, en este caso funciona si lo estas usando o si no. 3600=1hr tiempo estánda
-=======
-#Configuración de JWT para autenticación y autorización
-import os
-JWT_SECRET_KEY = os.getenv('JWT_SERCRET_KEY')
+from dotenv import load_dotenv
+
+# Cargar variables de entorno desde .env si existe
+load_dotenv()
+
+# Clave secreta para JWT (usa JWT_SECRET_KEY en .env). Si no está, intenta SECRET_KEY
+JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY') or os.getenv('SECRET_KEY')
+
+# Ubicación del token y expiración (segundos)
 JWT_TOKEN_LOCATION = ["headers"]
 JWT_ACCESS_TOKEN_EXPIRES = 3600  # 1 hora
->>>>>>> dev
+
 JWT_HEADER_NAME = "Authorization"
 JWT_HEADER_TYPE = "Bearer"
